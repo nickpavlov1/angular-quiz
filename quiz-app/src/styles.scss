@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+  }
+  
+ul {
+  list-style-type: none;
+}
+
+  @font-face {
+    font-family: "Open Sans Semibold";
+    src: url("../src/assets/fonts/OpenSans-Semibold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../src/assets/fonts/OpenSans-CondLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }

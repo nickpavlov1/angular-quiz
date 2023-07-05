@@ -1,0 +1,54 @@
+@import '../../_variables';
+
+.quiz-container {
+  width: 80%;
+  min-width: 20rem;
+  position: relative;
+  top: 1rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+
+  .quiz-card {
+    text-align: center;
+
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-bottom: 2rem;
+
+      .quiz-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: "Open Sans Semibold";
+        margin-bottom: 2px !important;
+      }
+    }
+
+    .question-text {
+      font-family: "Open Sans Condensed";
+      font-size: 28px;
+      padding-bottom: 7px;
+    }
+    .question-option-group {
+      margin-bottom: 1rem;
+      .question-option {
+        font-family: "Open Sans Semibold";
+        font-size: 16px;
+      }
+
+    }
+
+    .submit-button {
+      font-family: "Open Sans Condensed";
+      font-size: 22px;
+      color: $white;
+      background-color: $darkblue;
+      margin: 1rem 0;
+    }
+
+  }
+}

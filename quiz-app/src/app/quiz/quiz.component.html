@@ -1,0 +1,24 @@
+<div class="quiz-container">
+  <mat-card class="quiz-card">
+    <mat-card-header class="header-container">
+      <mat-card-title class="quiz-title">Quiz</mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="quizForm" (ngSubmit)="openDialog()">
+      <ul>
+        <li *ngFor="let question of questions; let i = index">
+          <mat-card class="question-card">
+            <p class="question-text">{{ question.text }}</p>
+            <mat-radio-group [formControlName]="'question' + i" class="question-option-group">
+              <mat-radio-button *ngFor="let option of question.options" [value]="option" class="question-option">
+                {{ option }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </mat-card>
+        </li>
+      </ul>
+      <button mat-raised-button type="submit" class="submit-button" [disabled]="quizForm.invalid">
+        Submit
+      </button>
+    </form>
+  </mat-card>
+</div>

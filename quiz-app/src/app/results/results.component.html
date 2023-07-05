@@ -1,0 +1,44 @@
+<div *ngIf="!(isSubmitted | async)"  class="no-results-container">
+  <mat-card class="no-results-card">
+    <p>Complete the quiz to see the results</p>
+  </mat-card>
+</div>
+<div *ngIf="isSubmitted | async" class="results-container">
+  <mat-card class="quiz-results-card">
+    <mat-card-header class="header-container">
+      <mat-card-title class="quiz-results-title">Quiz Results</mat-card-title>
+    </mat-card-header>
+    <div class="progress-bar-container">
+      <mat-progress-bar class="progress-bar-answers" mode="determinate" [value]="getScorePercentage()">
+      </mat-progress-bar>
+    </div>
+      <div class="progress-numbers">
+        <span>{{ correctAnswersCount }} / {{ totalQuestions }}</span>
+      </div>
+      <ul class="answers-list-container">
+        <div class="question-results-container">
+          <li *ngFor="let question of questions">
+            <div class="question-card" [ngStyle]="{
+              'border':
+                  question.selectedOption === question.answer
+                  ? '3px solid #27a764'
+                  : '3px solid #bf4141'
+
+            }">
+              <p>{{ question.text }}</p>
+              <p>
+                Your answer:
+                <span
+                >
+                  {{ question.selectedOption }}
+                </span>
+              </p>
+              <p>Correct answer: {{ question.answer }}</p>
+            </div>
+          </li>
+        </div>
+
+      </ul>
+  </mat-card>
+
+  </div>

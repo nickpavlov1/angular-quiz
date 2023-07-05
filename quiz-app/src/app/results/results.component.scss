@@ -1,0 +1,84 @@
+@import '../../_variables';
+
+.no-results-container  {
+  width: 60%;
+  min-width: 20rem;
+  height: 7rem;
+  position: relative;
+  top: 1rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .no-results-card {
+    text-align: center;
+    font-family: "Open Sans Semibold";
+  }
+}
+
+.results-container {
+  width: 80%;
+  min-width: 20rem;
+  position: relative;
+  top: 1rem;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  .quiz-results-card {
+
+    .header-container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-bottom: 2rem;
+      text-align: center;
+      .quiz-results-title {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-family: "Open Sans Semibold";
+        margin-bottom: 2px !important;
+      }
+    }
+
+    .progress-bar-container {
+      padding: 1rem 2rem;
+      .progress-bar-answers {
+        width: 100%;
+      }
+    }
+
+    .progress-numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-weight: bold;
+      font-family: "Open Sans Condensed";
+
+    }
+    .answers-list-container {
+      display: flex;
+      justify-content: center;
+      .question-results-container {
+        text-align: center;
+        margin-top: 1rem;
+        font-family: "Open Sans Condensed";
+        .question-card {
+          margin: 1rem;
+          max-width: 25rem;
+          border-radius: 5px;
+          text-align: center;
+          .correct-answer {
+            border: 3px solid $green;
+          }
+          .wrong-answer {
+            border: 3px solid $red;
+          }
+        }
+      }
+    }
+  }
+}

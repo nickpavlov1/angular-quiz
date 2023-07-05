@@ -1,0 +1,6 @@
+<mat-toolbar class="navbar">
+    <button *ngIf="!(isSubmitted | async)" mat-button routerLink="/quiz" class="quiz-button">Quiz</button>
+    <button *ngIf="isSubmitted | async" mat-button  (click)="resetQuiz()" class="reset-button">Reset Quiz</button>
+    <span class="navbar-title">Quiz App</span>
+    <button mat-button routerLink="/results" class="results-button">Results</button>
+</mat-toolbar>

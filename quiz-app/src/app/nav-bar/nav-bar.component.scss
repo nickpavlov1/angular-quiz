@@ -1,0 +1,37 @@
+@import '../../_variables';
+
+.navbar {
+    background-color: $darkblue;
+    width: 100%;
+    padding: 8px;
+    justify-content: center;
+    
+    .navbar-title {
+        color: $white;
+        font-size: 20px;
+        margin: 0 1rem;
+        font-family: "Open Sans Semibold";
+        font-size: 25px;
+    }
+}
+
+.quiz-button, .results-button, .reset-button {
+    color: $white !important;
+    margin: 0 0.7rem;
+    min-width: 82px;
+    font-family: "Open Sans Condensed";
+    font-size: 22px;
+}
+
+.quiz-button {
+    background-color: $blue;
+}
+  
+.results-button {
+    background-color: $green;
+}
+  
+.reset-button {
+    background-color: $red;
+}
+
